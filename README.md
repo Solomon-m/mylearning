@@ -1,1 +1,1 @@
-# Example programs for learngin
+# Example programs for learning
