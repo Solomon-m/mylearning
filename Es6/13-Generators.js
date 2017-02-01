@@ -25,6 +25,16 @@ var genObj = generator();
  Whenever a yield expression is reached, that value is emitted by the iterator and function execution is suspended.
 */
 
+function* test(){
+  let one = yield "one";
+  yield one +"two";
+  yield "three";
+}
+let t = test()
+t.next(); // you cant pass any value to new born generator. 
+t.next("passing some value : ");  // you will get 'passing some value : two'.
+t.next(); // three
+
 function* multiplier (value) {
   yield value * 2
   yield value * 3
