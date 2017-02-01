@@ -11,3 +11,15 @@ if(true){
 }
 
 console.log("foo:",foo); // foo is undefiend. 
+
+const person = {
+ name:'solomon'
+}
+
+person.address = "chennai" // possible 
+person.name = "anbu"; // changing also possible 
+
+
+// but we can't change the structure of person since its const. 
+
+person = {} // will throw error.
