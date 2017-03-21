@@ -38,4 +38,22 @@ var result = source
 
     // result : 33
 
+// Adding only number from above soureE which is Observable. it can occur over the time. 
 
+ var result = sourceE
+    .map(x => parseInt(x)) // takes source and does parseInt finally return new array.  [1, 1, NaN, 2, 3, 5, NaN, 8, 13]
+    .filter(x => !isNaN(x)) // Here we are filter that array. We are take the item which is not an number. [1, 1, 2, 3, 5, 8, 13]
+    .reduce((x, y) => { // Here we are adding every item. x is previous item and y is current item.  result: 33. 
+        console.log("x::", x, ":y:", y);
+        return x + y;
+    });
+
+result.subscribe(x=>console.log(x))
+	// x::1: y: 1
+	// x::2: y: 2
+	// x::4: y: 3
+	// x::7: y: 5
+	// x::12: y: 8
+	// x::20: y: 13
+
+	//  33 sum of those numbers.
