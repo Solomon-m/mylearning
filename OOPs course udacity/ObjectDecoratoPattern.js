@@ -49,20 +49,47 @@ var carlike = function(obj,loc){
 
 // Instead of create another global object we can use .methods
 
+// var Car = function(loc){
+// 	var obj = {loc:loc};
+// 	extend(obj,Car.methods);					
+// 	return obj;
+// };
+
+//     Car.methods = {
+//          move: function(){ 
+//            this.loc++;          
+// 	     }	
+// 	 };
+	 
+// var ben = Car(2);
+// ben.move();
+
+// prototype
+
 var Car = function(loc){
-	var obj = {loc:loc};
-	extend(obj,Car.methods);					
+	var obj = Object.create(Car.prototype)
+	 obj.loc = loc;
 	return obj;
 };
 
-    Car.methods = {
-         move: function(){ 
-           this.loc++;          
-	     }	
-	 };
+    Car.prototype.move = function(){
+        this.loc++;
+    };
 	 
 var ben = Car(2);
 ben.move();
+
+
+//---------
+
+var Dog =function(){
+	return {leg:4,bark:alert};
+};
+
+var fido = Dog();
+console.log("::",fido instanceof Dog); // false. becuse Dog prototype will not be availble in fido. 
+
+
 
 
     
