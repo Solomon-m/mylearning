@@ -1,0 +1,4 @@
+
+links:
+https://leanpub.com/understandinges6/read
+https://www.gitbook.com/book/francisfeng/understanding-es6/details

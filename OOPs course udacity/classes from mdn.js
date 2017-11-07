@@ -1,3 +1,6 @@
+// class in js 
+// https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes
+
 // Class declarations. 
 class Rectangle {
   constructor(height, width) {
