@@ -196,7 +196,7 @@ function Person(name){
     this.name = name;
 }
 
-var user = new Person('kamesh');
+var user = new Person('solomon');
 console.log(user);
 ```
 
@@ -1021,7 +1021,7 @@ Worker.prototype.describe = function() {
     return this.title + " " + this.name;
 };
 
-var user = new Worker('Kamesh','Devloper')
+var user = new Worker('solomon','Devloper')
 user instanceof Worker
 user instanceof Person
 ```
@@ -1047,14 +1047,14 @@ Worker.prototype.describe = function() {
     return this.title + " " + this.name;
 };
 
-var user = new Worker('Kamesh','Devloper')
+var user = new Worker('solomon','Devloper')
 user instanceof Worker
 user instanceof Person
 ```
 How to call super function ? is there super available in javascript
 No but we can mimic it.
 ```javascript
-user.describe(); // Developer Kamesh.
+user.describe(); // Developer solomon.
 
 Worker.prototype.describe = function() {
     return this.__proto__ // worker prototype
